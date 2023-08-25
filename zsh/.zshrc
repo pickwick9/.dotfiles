@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.dotfiles/zsh/.zsh_profile
 
-# Automatically startup ssh agent
+# auto-start ssh agent
 eval "$(ssh-agent -s)"
 
 # BEGIN ANSIBLE MANAGED BLOCK FOR NVM
