@@ -104,4 +104,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.dotfiles/zsh/.zsh_profile
 
+# Automatically startup ssh agent
+eval "$(ssh-agent -s)"
 
+# BEGIN ANSIBLE MANAGED BLOCK FOR NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# END ANSIBLE MANAGED BLOCK FOR NVM
+# BEGIN ANSIBLE MANAGED BLOCK FOR PYENV
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+# END ANSIBLE MANAGED BLOCK FOR PYENV

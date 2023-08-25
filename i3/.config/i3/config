@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -83,10 +83,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod1+h split h
+bindsym Mod4+h split h
 
 # split in vertical orientation
-bindsym Mod1+v split v
+bindsym Mod4+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
