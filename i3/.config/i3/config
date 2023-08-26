@@ -34,7 +34,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Custom autoexec stuff
+# Autostart redshift (nightlight) 
 exec --no-startup-id redshift -m randr -O 3000
 
 # Use pactl to adjust volume in PulseAudio.
