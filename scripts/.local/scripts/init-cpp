@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo -n "Enter the project name: "
+read project_name
+
+if [ -d "$project_name" ]; then
+    echo "Directory $project_name already exists!"
+    exit 1
+fi
+
+mkdir -p "$project_name"/{source_files,header_files,build}
+
+cat > "$project_name"/.vimspector.json <<EOL
+{
+  ### .vimspector.json contents here ###
+}
+EOL
+
+echo "C++ project $project_name created successfully!"

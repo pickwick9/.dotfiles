@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo -n "Enter the Rust project name: "
+read project_name
+
+if [ -d "$project_name" ]; then
+    echo "Directory $project_name already exists!"
+    exit 1
+fi
+
+cargo new "$project_name"
+
+cd "$project_name"
+
+cat > .vimspector.json <<EOL
+{
+  ### .vimspector.json contents here ###
+}
+EOL
+
+echo "Rust project $project_name created successfully!"
