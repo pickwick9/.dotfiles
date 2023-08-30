@@ -18,6 +18,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Copy the current line or selected text into the system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
+-- Paste from the system clipboard
+
+
 -- Delete the current line or selected block without storing it in the yank register
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
@@ -35,5 +38,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Don't do anything if Q is invoked (so you don't accidentally enter Ex mode)
 vim.keymap.set("n", "Q", "<nop>")
 
--- ill figure this out later (or delete it if I end up start entering configuration hell)
+-- Tmux sessionizer
+vim.keymap.set("n", "<leader>x", "<cmd>:!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
