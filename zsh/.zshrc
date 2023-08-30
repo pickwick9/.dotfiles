@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/zsh/.zsh_profile
 
 # auto-start ssh agent
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)"
 
 # BEGIN ANSIBLE MANAGED BLOCK FOR NVM
 export NVM_DIR="$HOME/.nvm"
