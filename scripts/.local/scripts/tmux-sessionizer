@@ -1,26 +1,35 @@
 #!/usr/bin/env bash
 
+# Check if a directory was provided as an argument. If not, use fzf to select a directory
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
+  # Search for directories in the home directory and use fzf to let the user select one
   selected=$(find ~/ -type d | fzf)
 fi
 
+# If no directory was selected (either through argument or fzf), exit the script
 if [[ -z $selected ]]; then
   exit 0
 fi
 
+# Convert the directory name to a format suitable for a tmux session name (replace dots with underscores)
 selected_name=$(basename "$selected" | tr . _)
+
+# Check if any tmux process is currently running
 tmux_running=$(pgrep tmux)
 
+# If not inside a tmux session, and tmux isn't running elsewhere, start a new session with the selected name and directory
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-  tmux new-session -s selected_name -c $selected
+  tmux new-session -s $selected_name -c $selected
   exit 0
 fi
 
+# If the session with the given name doesn't exist, create it in detached mode
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
   tmux new-session -ds $selected_name -c $selected
 fi
 
+# Switch to the session with the selected name
 tmux switch-client -t $selected_name
 

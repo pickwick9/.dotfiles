@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Get the current session name
+current_session=$(tmux display-message -p '#S')
+
+# Get the next session to switch to (which will be the last available session in the list that's not the current session)
+next_session=$(tmux list-sessions -F "#{session_name}" | grep -v "^$current_session$" | tail -n 1)
+
+# Switch to the next session if it exists
+if [[ ! -z "$next_session" ]]; then
+    tmux switch-client -t "$next_session"
+fi
+
+# Kill the current session
+tmux kill-session -t "$current_session"
+
