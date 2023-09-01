@@ -29,13 +29,6 @@ fi
 # Create the main project directory and its subdirectories
 mkdir -p "$project_name"/{source_files,header_files,build}
 
-# Create a .vimspector.json file inside the project directory with the provided contents
-cat > "$project_name"/.vimspector.json <<EOL
-{
-  ### .vimspector.json contents here ###
-}
-EOL
-
 # Success message
 echo "C++ project $project_name created successfully!"
 
