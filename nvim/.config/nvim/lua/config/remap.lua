@@ -24,20 +24,18 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- Delete the current line or selected block without storing it in the yank register
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
--- Move forward/backward through the quickfix list
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-
--- Move forward/backward through the location list
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 -- Find and replace all (whole words not substrings) in the current file (case sensitive)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Don't do anything if Q is invoked (so you don't accidentally enter Ex mode)
 vim.keymap.set("n", "Q", "<nop>")
 
--- Tmux sessionizer
+-- Make the current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>:!chmod +x %<CR>", { silent = true })
+
+-- tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- tmux-windowizer
+vim.keymap.set("n", "<C-t>", "<cmd>silent !tmux new-window -c %:p:h<CR>")
+
