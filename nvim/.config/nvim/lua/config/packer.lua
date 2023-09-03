@@ -3,21 +3,21 @@
 vim.cmd.packadd('packer.nvim')
 
 require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim' -- packer can manage itself
 
   use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("theprimeagen/vim-be-good")
+  use("tpope/vim-commentary")
   use({ "rose-pine/neovim", as = "rose-pine" })
 
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/plenary.nvim'}}
   }
-  
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -40,6 +40,6 @@ require('packer').startup(function()
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-  
+
 end)
 
