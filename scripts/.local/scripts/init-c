@@ -30,5 +30,5 @@ fi
 mkdir -p "$project_name"/{source_files,header_files,build}
 
 # Success message
-echo "C++ project $project_name created successfully!"
+echo "C project $project_name created successfully!"
 
