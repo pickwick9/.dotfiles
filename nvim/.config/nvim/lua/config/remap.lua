@@ -15,10 +15,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- Repeatable paste and replace (without the yank register getting updated with what was delete/replaced)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- Copy the current line or selected text into the system clipboard
+-- Copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
--- Paste from the system clipboard
+-- Paste from system clipboard
 
 
 -- Delete the current line or selected block without storing it in the yank register
@@ -38,4 +38,3 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- tmux-windowizer
 vim.keymap.set("n", "<C-t>", "<cmd>silent !tmux new-window -c %:p:h<CR>")
-

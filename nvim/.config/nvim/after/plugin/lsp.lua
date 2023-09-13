@@ -4,9 +4,9 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'eslint',
-  'tsserver',
   'pyright',
   'lua_ls',
+  'gdscript',
   'clangd',
   'rust_analyzer',
 })

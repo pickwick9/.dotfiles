@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Exec Path: /usr/bin/gnome-terminal
+# Exec Flags: -- /home/allen/.local/scripts/open-nvim-godot {file}
+
+# Get the directory of the file being edited
+path="$1"
+dir=$(dirname "$path")
+
+# Convert the directory name to a format suitable for a tmux session name (replace dots with underscores)
+session_name=$(basename "$dir" | tr . _)
+window_name=$(basename "$path" | tr . _)
+
+# Check if the session with the given name exists
+if ! tmux has-session -t=$session_name 2> /dev/null; then
+    # If not, create it and directly start nvim with the file
+    tmux new-session -d -s $session_name -c $dir -n $window_name "nvim '$path'; bash"
+else
+    # Check if the window with the given name exists in the session
+    if ! tmux list-windows -t $session_name | grep -q $window_name; then
+        # If not, create a new window in the session and open nvim with the file
+        tmux new-window -t $session_name: -n $window_name -c $dir "nvim '$path'; bash"
+    fi
+fi
+
+# Attach to the session and select the window for the file
+tmux attach-session -t $session_name -d && tmux select-window -t $window_name
+
