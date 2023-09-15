@@ -22,7 +22,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
 
 -- Delete the current line or selected block without storing it in the yank register
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({"n", "v"}, "<leader>dd", [["_d]])
 
 -- Find and replace all (whole words not substrings) in the current file (case sensitive)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
