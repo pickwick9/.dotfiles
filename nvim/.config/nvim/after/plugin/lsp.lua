@@ -6,10 +6,10 @@ lsp.ensure_installed({
   'eslint',
   'pyright',
   'lua_ls',
-  'gdscript',
   'clangd',
   'rust_analyzer',
 })
+require'lspconfig'.gdscript.setup{}
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {
@@ -21,7 +21,6 @@ lsp.configure('lua-language-server', {
         }
     }
 })
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
