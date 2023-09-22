@@ -8,9 +8,13 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
--- Scroll window up/down by half the number of lines displayed
+-- Scroll window up/down by half the number of lines displayed (center cursor at half-page)
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- Center cursor at half-page when searching
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Repeatable paste and replace (without the yank register getting updated with what was delete/replaced)
 vim.keymap.set("x", "<leader>p", [["_dP]])
