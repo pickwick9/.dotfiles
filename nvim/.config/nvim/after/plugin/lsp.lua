@@ -23,6 +23,19 @@ lsp.configure('lua-language-server', {
 })
 
 local cmp = require('cmp')
+
+cmp.setup({
+    sorting = {
+        comparators = {
+            cmp.config.compare.exact,
+            cmp.config.compare.length,
+            cmp.config.compare.offset,
+            cmp.config.compare.recently_used,
+            xcmp.config.compare.score,
+        },
+    },
+})
+
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
