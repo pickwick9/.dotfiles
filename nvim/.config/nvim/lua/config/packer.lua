@@ -6,15 +6,12 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
   use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
-  use({"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}})
-  use("theHamsta/nvim-dap-virtual-text")
   use("theprimeagen/harpoon")
   use("theprimeagen/vim-be-good")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("tpope/vim-commentary")
   use({ "rose-pine/neovim", as = "rose-pine" })
-  require("dapui").setup()
 
   use {
     'nvim-telescope/telescope.nvim',
