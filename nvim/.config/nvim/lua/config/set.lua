@@ -10,8 +10,8 @@ vim.opt.expandtab = true
 vim.cmd [[
 augroup IndentationSettings
   autocmd!
-  autocmd BufRead,BufNewFile * setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-  autocmd FileType python,rust,markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+  autocmd BufRead,BufNewFile * setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+  autocmd FileType python,rust,markdown setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 ]]
 
