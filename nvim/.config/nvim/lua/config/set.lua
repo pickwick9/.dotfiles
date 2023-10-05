@@ -18,8 +18,8 @@ augroup END
 -- Enable smart indents
 vim.opt.smartindent = true
 
--- Disable line wrap
-vim.opt.wrap = false
+-- Enable line wrap
+vim.opt.wrap = true
 
 -- Don't backup files, instead make undotree have a "long memory"
 vim.opt.swapfile = false
