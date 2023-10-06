@@ -1,9 +1,6 @@
 -- Set <leader> to spacebar
 vim.g.mapleader = " "
 
--- Open netrw in the directory of the current file in the current window.
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Move the selected block one line up/down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
