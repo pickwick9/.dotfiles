@@ -3,5 +3,5 @@ export PATH="$HOME/.local/scripts:$PATH"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
-bindkey '^ ' autosuggest-execute
+bindkey '^ ' autosuggest-accept
 bindkey -s ^f "tmux-sessionizer\n"
