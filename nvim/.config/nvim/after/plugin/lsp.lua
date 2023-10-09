@@ -9,7 +9,6 @@ lsp.ensure_installed({
   'clangd',
   'rust_analyzer',
 })
-require'lspconfig'.gdscript.setup{}
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {
