@@ -5,21 +5,13 @@ vim.cmd.packadd('packer.nvim')
 require('packer').startup(function()
     use 'wbthomason/packer.nvim' -- packer can manage itself
 
+    use("mbbill/undotree")
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
     use("theprimeagen/harpoon")
     use("theprimeagen/vim-be-good")
-    use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use("tpope/vim-commentary")
     use({ "rose-pine/neovim", as = "rose-pine" })
-
-    use {
-        "mfussenegger/nvim-dap",
-        requires = {
-            {"rcarriga/nvim-dap-ui"},
-            {"theHamsta/nvim-dap-virtual-text"},
-        }
-    }
 
     use {
         'nvim-telescope/telescope.nvim',
