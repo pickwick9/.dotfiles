@@ -9,23 +9,7 @@ lsp.ensure_installed({
   'clangd',
   'rust_analyzer',
   'ocamllsp',
-  -- Solidity language servers aren't the best as of now
-  -- 'solc',
-  -- 'solang',
-  -- 'solidity', 
-  -- 'solidity_ls',
-  -- 'solidity_ls_nomicfoundation',
-})
-
--- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
+  'solidity_ls_nomicfoundation',
 })
 
 local cmp = require('cmp')
