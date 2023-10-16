@@ -1,7 +1,10 @@
 export PATH="$HOME/.local/scripts:$PATH"
+export PATH="$PATH:/home/allen/.nvm/versions/node/v20.8.0/bin" >> ~/.zshrc
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
 bindkey '^ ' autosuggest-accept
 bindkey -s ^f "tmux-sessionizer\n"
+
+eval $(opam env --switch=default)

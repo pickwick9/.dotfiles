@@ -14,6 +14,14 @@ require('packer').startup(function()
     use({ "rose-pine/neovim", as = "rose-pine" })
 
     use {
+        "mfussenegger/nvim-dap",
+        requires = {
+            {"rcarriga/nvim-dap-ui"},
+            {"theHamsta/nvim-dap-virtual-text"},
+        }
+    }
+
+    use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/plenary.nvim'}}
     }

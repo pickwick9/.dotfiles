@@ -8,6 +8,13 @@ lsp.ensure_installed({
   'lua_ls',
   'clangd',
   'rust_analyzer',
+  'ocamllsp',
+  -- Solidity language servers aren't the best as of now
+  -- 'solc',
+  -- 'solang',
+  -- 'solidity', 
+  -- 'solidity_ls',
+  -- 'solidity_ls_nomicfoundation',
 })
 
 -- Fix Undefined global 'vim'
