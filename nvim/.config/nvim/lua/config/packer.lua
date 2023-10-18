@@ -6,11 +6,11 @@ require('packer').startup(function()
     use 'wbthomason/packer.nvim' -- packer can manage itself
 
     use("mbbill/undotree")
-    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
     use("theprimeagen/harpoon")
     use("theprimeagen/vim-be-good")
     use("tpope/vim-fugitive")
     use("tpope/vim-commentary")
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} )
     use({ "rose-pine/neovim", as = "rose-pine" })
 
     use {

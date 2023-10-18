@@ -8,8 +8,6 @@ lsp.ensure_installed({
   'lua_ls',
   'clangd',
   'rust_analyzer',
-  'ocamllsp',
-  'solidity_ls_nomicfoundation',
 })
 
 local cmp = require('cmp')

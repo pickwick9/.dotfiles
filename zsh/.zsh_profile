@@ -1,5 +1,4 @@
 export PATH="$HOME/.local/scripts:$PATH"
-# export PATH="$PATH:/home/allen/.nvm/versions/node/v20.8.1/bin" 
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
