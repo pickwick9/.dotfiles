@@ -5,5 +5,3 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 bindkey '^ ' autosuggest-accept
 bindkey -s ^f "tmux-sessionizer\n"
-
-eval $(opam env --switch=default)
