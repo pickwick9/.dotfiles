@@ -4,4 +4,3 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
 bindkey '^ ' autosuggest-accept
-bindkey -s ^f "tmux-sessionizer\n"

@@ -32,4 +32,3 @@ fi
 
 # Switch to the session with the selected name
 tmux switch-client -t $selected_name
-
