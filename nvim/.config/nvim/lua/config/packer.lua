@@ -11,7 +11,6 @@ require('packer').startup(function()
         "rcarriga/nvim-dap-ui",
         requires = { "mfussenegger/nvim-dap" }
     }
-    require("dapui").setup()
 
     ----- Navigation (harpoon, telescope) -----
     use("theprimeagen/harpoon")

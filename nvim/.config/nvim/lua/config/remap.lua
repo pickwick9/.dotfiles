@@ -25,14 +25,14 @@ vim.keymap.set({"n", "v"}, "<leader>dd", [["_d]])
 -- Find and replace all (whole words not substrings) in the current file (case sensitive)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Don't do anything if Q is invoked (so you don't accidentally enter Ex mode)
-vim.keymap.set("n", "Q", "<nop>")
-
 -- Make the current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>:!chmod +x %<CR>", { silent = true })
 
--- tmux-sessionizer
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- Don't do anything if any of these are invoked
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<C-n", "<nop>")
+vim.keymap.set("n", "<C-c", "<nop>")
 
--- tmux-windowizer
-vim.keymap.set("n", "<C-t>", "<cmd>silent !tmux new-window -c %:p:h<CR>")
+-- tmux session + window management
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-n>", "<cmd>silent !tmux new-window -c %:p:h<CR>")

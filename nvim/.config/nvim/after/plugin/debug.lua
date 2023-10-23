@@ -1,3 +1,7 @@
+----- Setup -----
+require("nvim-dap-virtual-text").setup()
+require("dapui").setup()
+
 ----- Symbols -----
 vim.fn.sign_define("DapBreakpoint", {text="🔴"})
 vim.fn.sign_define("DapStopped", {text="🟢"})
