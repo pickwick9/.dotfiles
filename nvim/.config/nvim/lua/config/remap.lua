@@ -19,9 +19,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
--- Paste from system clipboard
-
-
 -- Delete the current line or selected block without storing it in the yank register
 vim.keymap.set({"n", "v"}, "<leader>dd", [["_d]])
 

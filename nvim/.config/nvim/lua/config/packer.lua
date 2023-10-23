@@ -5,19 +5,32 @@ vim.cmd.packadd('packer.nvim')
 require('packer').startup(function()
     use 'wbthomason/packer.nvim' -- packer can manage itself
 
-    use("mbbill/undotree")
-    use("theprimeagen/harpoon")
-    use("theprimeagen/vim-be-good")
-    use("tpope/vim-fugitive")
-    use("tpope/vim-commentary")
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} )
-    use({ "rose-pine/neovim", as = "rose-pine" })
+    ----- Debugging -----
+    use("theHamsta/nvim-dap-virtual-text")
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = { "mfussenegger/nvim-dap" }
+    }
+    require("dapui").setup()
 
+    ----- Navigation (harpoon, telescope) -----
+    use("theprimeagen/harpoon")
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/plenary.nvim'}}
+        requires = { 'nvim-lua/plenary.nvim' }
     }
 
+    ----- Colors (colorscheme, treesitter) -----
+    use {
+        "rose-pine/neovim",
+        as = "rose-pine"
+    }
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
+
+    ----- LSP -----
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -40,6 +53,11 @@ require('packer').startup(function()
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    ----- Misc (undotree, fugitive, commentary) -----
+    use("mbbill/undotree")
+    use("tpope/vim-fugitive")
+    use("tpope/vim-commentary")
 
 end)
 
