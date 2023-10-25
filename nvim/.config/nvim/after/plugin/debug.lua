@@ -1,6 +1,7 @@
 ----- Setup -----
-require("nvim-dap-virtual-text").setup()
 require("dapui").setup()
+require("nvim-dap-virtual-text").setup()
+require('telescope').load_extension('dap')
 
 ----- Symbols -----
 vim.fn.sign_define("DapBreakpoint", {text="🔴"})
@@ -13,6 +14,7 @@ vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>")
 vim.keymap.set("n", "<leader>dh", ":DapStepOut<CR>")
 vim.keymap.set("n", "<leader>dl", ":DapStepInto<CR>")
 vim.keymap.set("n", "<leader>dj", ":DapStepOver<CR>")
+vim.keymap.set("n", "<leader>df", ":Telescope dap frames <CR>")
 
 ----- DAP stuff -----
 local dap = require('dap')

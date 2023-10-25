@@ -6,6 +6,7 @@ require('packer').startup(function()
     use 'wbthomason/packer.nvim' -- packer can manage itself
 
     ----- Debugging -----
+    use("nvim-telescope/telescope-dap.nvim")
     use("theHamsta/nvim-dap-virtual-text")
     use {
         "rcarriga/nvim-dap-ui",
