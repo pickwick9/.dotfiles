@@ -15,6 +15,9 @@ augroup IndentationSettings
 augroup END
 ]]
 
+-- Fat cursor during insert mode
+vim.opt.guicursor = ""
+
 -- Enable smart indents
 vim.opt.smartindent = true
 
