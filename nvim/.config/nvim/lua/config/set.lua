@@ -1,25 +1,18 @@
--- Line numbers and relative line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
 -- 4 spaces for indentation
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
-vim.cmd [[
-augroup IndentationSettings
-  autocmd!
-  autocmd BufRead,BufNewFile * setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-  autocmd FileType python,rust,markdown setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-augroup END
-]]
+
+-- Line numbers and relative line numbers
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
 -- Fat cursor during insert mode
 vim.opt.guicursor = ""
 
--- Enable smart indents
-vim.opt.smartindent = true
+-- Disable smart indents
+vim.opt.smartindent = false
 
 -- Enable line wrap
 vim.opt.wrap = true
@@ -43,5 +36,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 -- Faster updatetime
-vim.opt.updatetime = 50 
+vim.opt.updatetime = 50
+
+-- Turn off relative line numbers when entering insert mode (turn them back on when exiting)
+vim.cmd [[
+augroup RelativeNumberToggle
+  autocmd!
+  autocmd InsertEnter * set norelativenumber
+  autocmd InsertLeave * set relativenumber
+augroup END
+]]
 
