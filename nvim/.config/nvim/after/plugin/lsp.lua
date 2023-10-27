@@ -4,6 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'clangd',
+    'clojure_lsp',
     'eslint',
     'lua_ls',
     'pyright',
