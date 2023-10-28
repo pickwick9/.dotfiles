@@ -3,12 +3,12 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'clangd',
-    'clojure_lsp',
-    'eslint',
-    'lua_ls',
-    'pyright',
-    'rust_analyzer',
+    "clangd",
+    "clojure_lsp",
+    "eslint",
+    "lua_ls",
+    "pyright",
+    "rust_analyzer",
 })
 
 local cmp = require('cmp')
