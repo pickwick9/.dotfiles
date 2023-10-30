@@ -6,9 +6,12 @@ lsp.ensure_installed({
     "clangd",
     "clojure_lsp",
     "eslint",
+    "gopls",
     "lua_ls",
     "pyright",
     "rust_analyzer",
+    "wgsl_analyzer",
+    "zls",
 })
 
 local cmp = require('cmp')

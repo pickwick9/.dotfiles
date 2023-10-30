@@ -5,11 +5,13 @@ require'nvim-treesitter.configs'.setup {
         "clojure",
         "cpp",
         "commonlisp",
+        "go",
         "javascript",
         "lua",
         "python",
         "rust",
         "wgsl",
+        "zig",
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
