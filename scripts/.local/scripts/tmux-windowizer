@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Check if a directory was provided as an argument. If not, use fzf to select a directory
+if [[ $# -eq 1 ]]; then
+  selected=$1
+else
+  # Search for directories in the home directory and use fzf to let the user select one
+  selected=$(find ~/ -type d | fzf)
+fi
+
+# If no directory was selected (either through argument or fzf), exit the script
+if [[ -z $selected ]]; then
+  exit 0
+fi
+
+# Check if any tmux process is currently running
+tmux_running=$(pgrep tmux)
+
+# If not inside a tmux session, and tmux isn't running elsewhere, start a new session with the first window in the selected directory
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+  tmux new-session -c $selected
+  exit 0
+fi
+
+# If inside a tmux session, just create a new window with the selected directory
+tmux new-window -c $selected
+
