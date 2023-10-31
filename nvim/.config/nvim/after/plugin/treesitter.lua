@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
         "c",
         "cpp",
         "lua",
+        "ocaml",
         "python",
         "rust",
         "wgsl",
