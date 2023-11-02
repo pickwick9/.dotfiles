@@ -3,11 +3,10 @@ require'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "c",
         "cpp",
+        "haskell",
         "lua",
-        "ocaml",
         "python",
         "rust",
-        "wgsl",
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)

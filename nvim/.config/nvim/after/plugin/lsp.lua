@@ -4,11 +4,10 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     "clangd",
+    "hls",
     "lua_ls",
-    "ocamllsp",
     "pyright",
     "rust_analyzer",
-    "wgsl_analyzer",
 })
 
 local cmp = require('cmp')

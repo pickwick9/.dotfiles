@@ -117,3 +117,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 # END ANSIBLE MANAGED BLOCK FOR PYENV
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#[ -f "/home/allen/.ghcup/env" ] && source "/home/allen/.ghcup/env" # ghcup-env
+[ -f "/home/allen/.ghcup/env" ] && source "/home/allen/.ghcup/env" # ghcup-env

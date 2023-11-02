@@ -5,3 +5,8 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 bindkey '^ ' autosuggest-accept
 bindkey -s ^f "tmux-sessionizer\n"
+
+####################################################################
+
+export PATSHOME="$HOME/ATS2-Postiats-0.4.2"
+export PATH="${PATSHOME}/bin:${PATH}"
