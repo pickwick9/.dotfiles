@@ -4,7 +4,6 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     "clangd",
-    "hls",
     "lua_ls",
     "pyright",
     "rust_analyzer",

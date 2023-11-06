@@ -3,7 +3,6 @@ require'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "c",
         "cpp",
-        "haskell",
         "lua",
         "python",
         "rust",
