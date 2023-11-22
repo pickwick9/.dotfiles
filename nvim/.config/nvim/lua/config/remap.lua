@@ -28,5 +28,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Make the current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>:!chmod +x %<CR>", { silent = true })
 
--- Don't do anything if Q is invoked (so you don't accidentally enter Ex mode)
+-- Don't do anything if any of (q, Q, F1) are invoked 
+vim.keymap.set("n", "q", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<F1>", "<nop>")
+
