@@ -31,5 +31,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>:!chmod +x %<CR>", { silent = true })
 -- Don't do anything if any of (q, Q, F1) are invoked 
 vim.keymap.set("n", "q", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<F1>", "<nop>")
-
+vim.keymap.set({"n", "v", "i"}, "<F1>", "<nop>")
