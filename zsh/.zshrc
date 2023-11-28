@@ -104,13 +104,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.dotfiles/zsh/.zsh_profile
 
-# BEGIN ANSIBLE MANAGED BLOCK FOR NVM
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-# END ANSIBLE MANAGED BLOCK FOR NVM
-# BEGIN ANSIBLE MANAGED BLOCK FOR PYENV
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# PYENV
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
-# END ANSIBLE MANAGED BLOCK FOR PYENV
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
